@@ -49,10 +49,11 @@ or Python 2.7 if using v0.1:
 ### Installing psutil
 
 **Installing from Source**
-
+**
 
 
 **Installing with pip**
+*NOTE: This version of psutil will only work with Python 2.7 - Will not work for v0.2 and above.*
 
 Install pip, a Python package manager
 
@@ -63,6 +64,7 @@ Install pip, a Python package manager
 Then install the psutil package with pip. 
 
 `pip install psutil`
+
 
 # Versions
 ### Current Versions
