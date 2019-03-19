@@ -26,6 +26,7 @@ The script uses the psutil module to collect data about your CPU and system, the
 
 * Linux (Ubuntu/Debian, may work on other distros)
 * Windows 10 (WORK IN PROGRESS)
+* ChromeOS Linux Sandbox Support is currently broken - will not work. 
 
 ### CPUs
 **Please note that while the module itself supports 32-bit and 64-bit architectures, the author only has access to a 64-bit test system.**
@@ -34,7 +35,7 @@ The script uses the psutil module to collect data about your CPU and system, the
 * AMD Bulldozer/Excavator - Probably works as well. 
 * Intel - Kaby Lake and newer
 
-No support for ARM cpus as of right now. 
+No support for ARM cpus currently. 
 
 # Installation (Ubuntu/Debian)
 
@@ -46,11 +47,24 @@ or Python 2.7 if using v0.1:
 
 `sudo apt install python2`
 
+### Cloning the PyCPU git repository
+
+`git clone https://gitlab.com/eding42/pycpu.git`
+`cd pycpu`
+
 ### Installing psutil
 
 **Installing from Source**
-**
 
+Clone the psutil git repo:
+
+`git clone https://github.com/giampaolo/psutil.git`
+
+`cd psutil`
+
+Run the the psutil setup script:
+
+`python3 setup.py install`
 
 **Installing with pip**
 *NOTE: This version of psutil will only work with Python 2.7 - Will not work for v0.2 and above.*
@@ -65,6 +79,7 @@ Then install the psutil package with pip.
 
 `pip install psutil`
 
+If any permissions errors come up use `sudo`, or the `--user` tag.
 
 # Versions
 ### Current Versions
