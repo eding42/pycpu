@@ -9,7 +9,12 @@ command = input("Choose a function:\n1. CPU Frequency (MHz)\n2. CPU Temperature 
 
 if command == "1":
     unit = input("Choose unit:\n1.MHz\n2.GHz ")
+    interval = int(input("Choose update interval (in seconds): "))
+    if unit == "1":
+        while True:
+            print(str(round(psutil.cpu_freq()[0], -1) / 1000) + " GHz")
+            time.sleep(interval)
     if unit == "2":
         while True:
             print(str(round(psutil.cpu_freq()[0],-1)/1000)+" GHz")
-            time.sleep(0.75)
+            time.sleep(interval)
