@@ -1,14 +1,10 @@
 #!/usr/bin/python3
 
-print("-------------- Welcome to PyCPU v0.1 --------------")
+print("-------------- Welcome to PyCPU v1.0 --------------")
 
-import sensors
+command = input("Choose a function:\n1. CPU Frequency (MHz)\n2. CPU Temperature (UNDER DEVELOPEMENT)\n")
 
-sensors.init()
-try:
-    for chip in sensors.iter_detected_chips():
-        print('{} at {}' .format(chip, chip.adapter_name))
-        for feature in chip:
-            print('  {}: {}'.format(feature.label, feature.get_value()))
-finally:
-    sensors.cleanup()
+# Links to the cpu_freq.py script
+
+if command == "1":
+    exec(open("cpu_freq.py").read())
