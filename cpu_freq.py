@@ -14,17 +14,17 @@ while True:
         break
 while True:
     interval = input("\nChoose update interval (in seconds):\n")
-    if interval.isdigit() == True:
-        interval = int(interval)
-    if type(interval)==type(dummy):
-        print("\nSorry, please enter a supported value")
+    try:
+        interval = float(interval)
+    except ValueError:
+        print("You must enter a number")
     else:
         break
-    if unit == 2:
-        while True:
-            print(str(round(psutil.cpu_freq()[0], -1) / 1000) + " GHz")
-            time.sleep(interval)
-    if unit == 1:
-        while True:
-            print(str(round(psutil.cpu_freq()[0],2))+" MHz")
-            time.sleep(interval)
+if unit == 2:
+    while True:
+        print(str(round(psutil.cpu_freq()[0], -1) / 1000) + " GHz")
+        time.sleep(interval)
+if unit == 1:
+    while True:
+        print(str(round(psutil.cpu_freq()[0],2))+" MHz")
+        time.sleep(interval)
