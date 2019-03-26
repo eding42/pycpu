@@ -8,3 +8,6 @@ command = input("Choose a function:\n1. CPU Frequency (MHz)\n2. CPU Temperature 
 
 if command == "1":
     exec(open("cpu_freq.py").read())
+
+if command == "2":
+    exec(open("cpu_temp.py").read())
