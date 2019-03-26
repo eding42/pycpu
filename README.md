@@ -81,6 +81,8 @@ Then install the psutil package with pip.
 
 If any permissions errors come up use `sudo`, or the `--user` tag.
 
+**If there are any issues with installation, please refer to the Installation Issues section down below.**
+
 # Versions
 ### Current Versions
 
@@ -88,4 +90,20 @@ If any permissions errors come up use `sudo`, or the `--user` tag.
 
 ### Previous Versions
 
-**v0.1** - ~~Beta~~ Broken - Only works with Python2, utilizes different module ([PySensors](https://pypi.org/project/PySensors/)) as well.  
+**v0.1** - ~~Beta~~ Broken - Only works with Python2, utilizes different module ([PySensors](https://pypi.org/project/PySensors/)) as well. 
+
+# Known Issues
+
++ Installer Script for psutil fails with error "ModuleNotFoundError: No module named 'distutils.core'"
+
+**Solution**
+
+Make sure you have `distutils` and `pip` installed.
+
+`sudo apt install python3-distutils`
+`sudo apt install python3-pip`
+
+Or if you want Python 2:
+
+`sudo apt install python-disutils`
+`sudo apt install python-pip`
