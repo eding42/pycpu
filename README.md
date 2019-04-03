@@ -24,12 +24,12 @@ The script uses the psutil module to collect data about your CPU and system, the
 
 ### Operating Systems
 
-* Linux (Ubuntu/Debian, may work on other distros)
+* Linux (Ubuntu/Debian, should work on other distros with a little work)
 * Windows 10 (WORK IN PROGRESS)
-* ChromeOS Linux Sandbox Support is currently broken - will not work. 
+* ChromeOS - CPU Frequency broken, be sure you have all dependencies properly installed, as the Sandboxed linux present on Chromebooks lacks many key packages, like `build-essentials` for example. 
 
 ### CPUs
-**Please note that while the module itself supports 32-bit and 64-bit architectures, the author only has access to a 64-bit test system.**
+**Please note that while the original module itself supports 32-bit and 64-bit architectures, only 64 bit has been tested and developed.**
 
 * AMD Ryzen 3/5/7 - Summit Ridge, Pinnacla Ridge, Raven Ridge, and Bristol Ridge CPUs
 * AMD Bulldozer/Excavator - Probably works as well. 
@@ -94,7 +94,7 @@ If any permissions errors come up use `sudo`, or the `--user` tag.
 
 # Known Issues
 
-+ Installer Script for psutil fails with error "ModuleNotFoundError: No module named 'distutils.core'"
+### Installer Script for psutil fails with error "ModuleNotFoundError: No module named 'distutils.core'"
 
 **Solution**
 
@@ -108,7 +108,7 @@ Or if you want Python 2:
 `sudo apt install python-disutils`
 `sudo apt install python-pip`
 
-+ Installer Script for psutil fails with error "gcc: error: x86_64-linux-gnu-cc: No such file or directory"
+### Installer Script for psutil fails with error "gcc: error: x86_64-linux-gnu-cc: No such file or directory"
 
 **Solution**
 
