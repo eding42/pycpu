@@ -107,3 +107,15 @@ Or if you want Python 2:
 
 `sudo apt install python-disutils`
 `sudo apt install python-pip`
+
++ Installer Script for psutil fails with error "gcc: error: x86_64-linux-gnu-cc: No such file or directory"
+
+**Solution**
+
+Make sure you have `build-essentials` installed.
+
+`sudo apt install build-essentials`
+
+Also make sure you have the `python3-dev` package installed
+
+`sudo apt install python3-dev`
