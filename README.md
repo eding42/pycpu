@@ -1,8 +1,12 @@
 # PyCPU - A simple CPU monitoring tool
 
-This is an implementation of the psutil module, by Giampaolo Rodola, and was created for learning purposes.
+The `cpufreq` gnome extension freezing your computer? Can't find an alternative for CPU-Z on linux? Try `pycpu`, a simple and fast implementation of the psutil module!
 
-The script uses the psutil module to collect data about your CPU and system, then outputs it in the console. 
+The script outputs data about your system and CPU to your command line. 
+
+Future GUI releases are planned. 
+
+The `psutil` module was created by Giampaolo Rodola. 
 
 # Functionality and Features
 ### Current Features
