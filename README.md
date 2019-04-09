@@ -53,8 +53,15 @@ or Python 2.7 if using v0.1:
 
 ### Cloning the PyCPU git repository
 
+**For Newest Version**
+
 `git clone https://gitlab.com/eding42/pycpu.git`
 `cd pycpu`
+
+**For Specific Version (Stable)**
+`git clone -b '<version-name>' --single-branch https://gitlab.com/eding42/pycpu.git git-<version-name>`
+
+Replace `<version-name>` with the desirable version, ie `v0.2-Stable`.
 
 ### Installing psutil
 
@@ -90,15 +97,17 @@ If any permissions errors come up use `sudo`, or the `--user` tag.
 # Versions
 ### Current Versions
 
-**v0.2** - Stable
+Specific release notes are linked in the `tags` section of the repository.
+
+**v0.2-Stable** - Adds finished CPU Frequency utility, adds a master script for controlling the daughter scripts. Beginnings of Temperature utility. 
 
 ### Previous Versions
 
-**v0.1** - ~~Beta~~ Broken - Only works with Python2, utilizes different module ([PySensors](https://pypi.org/project/PySensors/)) as well. 
+*nothing here...*
 
 # Known Issues
 
-### Installer Script for psutil fails with error "ModuleNotFoundError: No module named 'distutils.core'"
+*Installer Script for psutil fails with error "ModuleNotFoundError: No module named 'distutils.core'"*
 
 **Solution**
 
@@ -112,7 +121,7 @@ Or if you want Python 2:
 `sudo apt install python-disutils`
 `sudo apt install python-pip`
 
-### Installer Script for psutil fails with error "gcc: error: x86_64-linux-gnu-cc: No such file or directory"
+*Installer Script for psutil fails with error "gcc: error: x86_64-linux-gnu-cc: No such file or directory"*
 
 **Solution**
 
