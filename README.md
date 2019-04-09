@@ -59,6 +59,7 @@ or Python 2.7 if using v0.1:
 `cd pycpu`
 
 **For Specific Version (Stable)**
+
 `git clone -b '<version-name>' --single-branch https://gitlab.com/eding42/pycpu.git git-<version-name>`
 
 Replace `<version-name>` with the desirable version, ie `v0.2-Stable`.
