@@ -56,6 +56,7 @@ or Python 2.7 if using v0.1:
 **For Newest Version**
 
 `git clone https://gitlab.com/eding42/pycpu.git`
+
 `cd pycpu`
 
 **For Specific Version (Stable)**
