@@ -79,6 +79,10 @@ Run the the psutil setup script:
 
 `python3 setup.py install`
 
+If user permission errors are encountered, run the `--user` tag instead. 
+
+`python3 setup.py install --user`
+
 **Installing with pip**
 *NOTE: This version of psutil will only work with Python 2.7 - Will not work for v0.2 and above.*
 
