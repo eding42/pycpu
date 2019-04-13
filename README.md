@@ -53,13 +53,19 @@ or Python 2.7 if using v0.1:
 
 ### Cloning the PyCPU git repository
 
-**For Newest Version**
+**For Stable Version**
 
 `git clone https://gitlab.com/eding42/pycpu.git`
 
 `cd pycpu`
 
-**For Specific Version (Stable)**
+Run the installer script, which will install all necessary dependencies. 
+
+`python3 install.py`
+
+**For Legacy Releases**
+
+A list of previous versions can be found under the 'Tags' tab of GitLab.
 
 `git clone -b '<version-name>' --single-branch https://gitlab.com/eding42/pycpu.git git-<version-name>`
 
