@@ -1,13 +1,16 @@
-import subprocess
 import os
-
-# Clone initial repository
-
-subprocess.run(["git clone https://gitlab.com/eding42/pycpu.git"])
-subprocess.run(["cd pycpu"])
 
 # Clone & Install psutil
 
-subprocess.run([git clone https://gitlab.com/eding42/pycpu.git])
+print("\n------------------ Cloning 'psutil' ------------------\n")
 
-# os.system("python3 cpu_freq.py")
+os.system("git clone https://github.com/giampaolo/psutil.git")
+os.chdir('psutil')
+
+print("\n-------------- Installing Dependencies ---------------\n")
+
+os.system("python3 setup.py install --user")
+os.system("chmod +x pycpu.py")
+
+print("\n------------------ Installation Finished! ------------------\n")
+
