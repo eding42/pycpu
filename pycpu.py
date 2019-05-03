@@ -7,8 +7,8 @@ command = input("Choose a function:\n1. CPU Frequency (MHz)\n2. CPU Temperature 
 # Links to the cpu_freq.py script
 
 if command == "1":
-    exec(open("cpu_freq.py").read())
+    exec(open("./source/cpu_freq.py").read())
 # Links to the cpu_freq.py script
 
 if command == "2":
-    exec(open("cpu_temp.py").read())
+    exec(open("./source/cpu_temp.py").read())
