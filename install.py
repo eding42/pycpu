@@ -1,7 +1,16 @@
-import subprocess
 import os
 
-subprocess.run(["ls"])
-os.system("python3 cpu_freq.py")
+# Clone & Install psutil
 
-stream = os.popen("")
+print("\n------------------ Cloning 'psutil' ------------------\n")
+
+os.system("git clone https://github.com/giampaolo/psutil.git")
+os.chdir('psutil')
+
+print("\n-------------- Installing Dependencies ---------------\n")
+
+os.system("python3 setup.py install --user")
+os.system("chmod +x pycpu.py")
+
+print("\n------------------ Installation Finished! ------------------\n")
+
