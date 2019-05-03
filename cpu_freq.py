@@ -16,7 +16,7 @@ while True:
     interval = input("\nChoose update interval (in seconds):\n")
     try:
         interval = float(interval)
-    except ValueError:sssss
+    except ValueError:
         print("You must enter a number")
     else:
         break
@@ -26,5 +26,5 @@ if unit == 2:
         time.sleep(interval)
 if unit == 1:
     while True:
-        print((round(psutil.cpu_freq()[0],2))+" MHz")
+        print(str((round(psutil.cpu_freq()[0],2)))+" MHz")
         time.sleep(interval)
