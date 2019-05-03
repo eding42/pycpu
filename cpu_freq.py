@@ -4,12 +4,6 @@ import time
 # Made dummy variable as an example for a string, to compare input with it.
 dummy = "this is a string"
 
-try:
-    test = str(round(psutil.cpu_freq()[0], -1) / 1000)
-except TypeError:
-    print("\nSorry, this device is not supported.\nPlease choose another function.\n")
-    exec(open("pycpu.py").read())
-
 while True:
     unit = input("\nChoose unit:\n1.MHz\n2.GHz\n")
     if unit.isdigit() == True:
@@ -32,5 +26,5 @@ if unit == 2:
         time.sleep(interval)
 if unit == 1:
     while True:
-        print((round(psutil.cpu_freq()[0],2))+" MHz")
+        print(str((round(psutil.cpu_freq()[0],2)))+" MHz")
         time.sleep(interval)
