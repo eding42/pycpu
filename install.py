@@ -1,5 +1,10 @@
 import os
 
+try:
+   import setuptools
+except ImportError:
+   print("Please install the python3-setuptools package")
+
 # Clone & Install psutil
 
 print("\n------------------ Cloning 'psutil' ------------------\n")
