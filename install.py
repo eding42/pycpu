@@ -9,6 +9,12 @@ def abort():
 # Checks for existing dependencies 
 print("\n--------------- Checking for Dependencies ---------------\n")
 
+# Checks for the build-essential package
+x=subprocess.call("dpkg -s build-essential", shell=True)
+if x == 1:
+   print("\nYou still have to install build-essential package. \n\nPlease install that with 'sudo apt install build-essential'\n")
+   abort()
+
 # Checks for the setup-tools package
 try:
    import setuptools
@@ -18,7 +24,7 @@ except ImportError:
 # Checks for the installation of the python3-dev package.
 x=subprocess.call("dpkg -s python3-dev", shell=True)
 if x == 1:
-   print("\nYou still have to install python3-setuptools package. \n\nPlease install that with 'sudo apt install python3-dev'\n")
+   print("\nYou still have to install dpkg -s python3-dev package. \n\nPlease install that with 'sudo apt install python3-dev'\n")
    abort()
 
 # Clone & Install psutil
