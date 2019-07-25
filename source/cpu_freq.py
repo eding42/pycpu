@@ -8,7 +8,7 @@ try:
     test = str(round(psutil.cpu_freq()[0], -1) / 1000)
 except TypeError:
     print("\nSorry, this device is not supported.\nPlease choose another function.\n")
-    exec(open("pycpu.py").read())
+    exec(open("../pycpu.py").read())
 
 while True:
     unit = input("\nChoose unit:\n1.MHz\n2.GHz\n")
