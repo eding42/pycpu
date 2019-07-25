@@ -11,7 +11,7 @@ except TypeError:
     exec(open("../pycpu.py").read())
 
 while True:
-    unit = input("\nChoose unit:\n1.MHz\n2.GHz\n")
+    unit = input("\nChoose unit:\n1. MHz\n2. GHz\n")
     if unit.isdigit() == True:
         unit = int(unit)
     if type(unit)==type(dummy):
