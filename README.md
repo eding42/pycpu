@@ -15,7 +15,7 @@ The `psutil` module was created by Giampaolo Rodola.
 
 ### Planned Features
 
-2. CPU Temperature - Work in progress
+2. CPU Temperature - Active Development, around 80% done. 
 
 3. CPU Utilization (%) - Planned
 
@@ -35,11 +35,12 @@ The `psutil` module was created by Giampaolo Rodola.
 ### CPUs
 **Please note that while the original module itself supports 32-bit and 64-bit architectures, only 64 bit has been tested and developed.**
 
-* AMD Ryzen 3/5/7 - Summit Ridge, Pinnacla Ridge, Raven Ridge, and Bristol Ridge CPUs
-* AMD Bulldozer/Excavator - Probably works as well. 
-* Intel - Kaby Lake and newer
+* AMD Ryzen 3/5/7 - Zen and Zen2-based architectures Summit Ridge(Zen), Pinnacle Ridge(Zen+), Raven Ridge(Zen), Matisse(Zen2) 
+* AMD Threadripper - Probable support.
+* AMD Bulldozer/Excavator - Bristol Ridge CPUs and older. Bulldozer support is currently unverified. 
+* Intel Core - Skylake and Derivatives. All except for Kaby Lake untested. 
 
-No support for ARM cpus currently. 
+No support for ARM CPUs. 
 
 # Installation (Ubuntu/Debian)
 
@@ -65,11 +66,11 @@ Run the installer script, which will install all necessary dependencies.
 
 **For Legacy Releases**
 
-A list of previous versions can be found under the 'Tags' tab of GitLab.
+A list of previous versions can be found under the 'Tags' section of Github.
 
 `git clone -b '<version-name>' --single-branch https://gitlab.com/eding42/pycpu.git git-<version-name>`
 
-Replace `<version-name>` with the desirable version, ie `v0.2-Stable`.
+Replace `<version-name>` with the desired version, ie `v0.2-Stable`.
 
 ### Installing psutil
 
