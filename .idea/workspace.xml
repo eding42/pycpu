@@ -157,7 +157,7 @@
       <workItem from="1564092403252" duration="1470000" />
       <workItem from="1564769418947" duration="88000" />
       <workItem from="1565663553477" duration="560000" />
-      <workItem from="1565843419765" duration="3398000" />
+      <workItem from="1565843419765" duration="3695000" />
     </task>
     <task id="LOCAL-00001" summary="work on install file for program">
       <created>1552970739800</created>
@@ -257,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565847062328</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update - added correct version number. Sorry.">
+      <created>1565847278025</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1565847278025</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -310,7 +317,8 @@
     <MESSAGE value="added basic master program, modularized a little" />
     <MESSAGE value="fix float not detected error on intervals.. that thing is giving me a lot of trouble" />
     <MESSAGE value="added interval support for cumulative printout and fixed bug where &#10;temperature sensor still iterates through subsensors, even when there aren't any. &#10;Updated version number to v1.05. Will add floating point support in next commit." />
-    <option name="LAST_COMMIT_MESSAGE" value="added interval support for cumulative printout and fixed bug where &#10;temperature sensor still iterates through subsensors, even when there aren't any. &#10;Updated version number to v1.05. Will add floating point support in next commit." />
+    <MESSAGE value="update - added correct version number. Sorry." />
+    <option name="LAST_COMMIT_MESSAGE" value="update - added correct version number. Sorry." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pycpu$pycpu.coverage" NAME="pycpu Coverage Results" MODIFIED="1565846586666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
