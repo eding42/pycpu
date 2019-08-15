@@ -38,9 +38,7 @@ if refresh == 1:
         if interval.isdigit() is True:
             interval = int(interval)
         if type(interval) == type(dummy):
-            print("\nSorry, please enter a supported value\n")
-
-            break
+            print("\nSorry, please enter a supported value")
         else:
             break
 else:
@@ -49,23 +47,36 @@ else:
 if choice == 1:
     print()
     temps = psutil.sensors_temperatures()
-    for name, entries in temps.items():
-        print(name)
+    if refresh:
+        while True:
+            for name, entries in temps.items():
+                print(name)
+                for entry in entries:
+                    print("    %-20s %s °C (high = %s °C, critical = %s °C)" % (
+                    entry.label or name, entry.current, entry.high,
+                    entry.critical))
+                print()
+            time.sleep(interval)
+    else:
+        for name, entries in temps.items():
+            print(name)
         for entry in entries:
             print("    %-20s %s °C (high = %s °C, critical = %s °C)" % (entry.label or name, entry.current, entry.high,
                                                                         entry.critical))
-        print()
-
 if choice == 2:
     temps = psutil.sensors_temperatures()
     device = input("\nEnter specific device ID. Case sensitive.\n")
     name = temps[device]
-    print("\nPossible Temperature Readings:\n")
     for entry in name:
         list = []
         list.append(entry.label)
+    if len(list) == 0 or len(list)==1:
+        print("Sorry. Only main sensor available.")
+    else:
+        print("\nPossible Temperature Readings:\n")
         for entry in list:
             print(entry)
+
     core = input("\nChoose reading to display. \nEnter '1' for All Sensors \nor enter a specific sensor\n")
     if core is "1":
         if refresh:

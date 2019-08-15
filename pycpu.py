@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-print("-------------- Welcome to PyCPU v1.0 --------------")
+print("-------------- Welcome to PyCPU v1.01 --------------")
 
 command = input("Choose a function:\n1. CPU Frequency (MHz)\n2. CPU Temperature (UNDER DEVELOPEMENT)\n")
 
