@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b0fa44c2-5711-4e68-b4e8-146bb7422e27" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="b0fa44c2-5711-4e68-b4e8-146bb7422e27" name="Default Changelist" comment="" />
+>>>>>>> 1f88739c7521f0d6964a53ace6f3bf689a503f46
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,15 +34,20 @@
       </map>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="1PT12LLd52fDLS4zyRyJCUzY3KL" />
+=======
+  <component name="ProjectId" id="1OWTTscXLRZC7Rlak0tbWSWXpJX" />
+>>>>>>> 1f88739c7521f0d6964a53ace6f3bf689a503f46
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -124,6 +133,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="pycpu2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pycpu" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -168,13 +178,23 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+=======
+    <list>
+      <item itemvalue="Python.cpu_temp" />
+      <item itemvalue="Python.install" />
+      <item itemvalue="Python.pycpu" />
+    </list>
+>>>>>>> 1f88739c7521f0d6964a53ace6f3bf689a503f46
     <recent_temporary>
       <list>
         <item itemvalue="Python.pycpu" />
+<<<<<<< HEAD
         <item itemvalue="Python.cpu_temp" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.install" />
         <item itemvalue="Python.pycpu2" />
+=======
+>>>>>>> 1f88739c7521f0d6964a53ace6f3bf689a503f46
       </list>
     </recent_temporary>
   </component>
@@ -196,9 +216,17 @@
       <workItem from="1555131466252" duration="17000" />
       <workItem from="1556855114610" duration="2115000" />
       <workItem from="1556858449133" duration="2705000" />
+<<<<<<< HEAD
       <workItem from="1564011219178" duration="10070000" />
       <workItem from="1565883078474" duration="704000" />
       <workItem from="1566365694025" duration="4000" />
+=======
+      <workItem from="1564092365078" duration="16000" />
+      <workItem from="1564092403252" duration="1470000" />
+      <workItem from="1564769418947" duration="88000" />
+      <workItem from="1565663553477" duration="560000" />
+      <workItem from="1565843419765" duration="3695000" />
+>>>>>>> 1f88739c7521f0d6964a53ace6f3bf689a503f46
     </task>
     <task id="LOCAL-00001" summary="work on install file for program">
       <created>1552970739800</created>
@@ -291,19 +319,19 @@
       <option name="project" value="LOCAL" />
       <updated>1556858478755</updated>
     </task>
-    <task id="LOCAL-00014" summary="Various housekeeping on all files">
-      <created>1564012155479</created>
+    <task id="LOCAL-00014" summary="added interval support for cumulative printout and fixed bug where &#10;temperature sensor still iterates through subsensors, even when there aren't any. &#10;Updated version number to v1.05. Will add floating point support in next commit.">
+      <created>1565847062328</created>
       <option name="number" value="00014" />
       <option name="presentableId" value="LOCAL-00014" />
       <option name="project" value="LOCAL" />
-      <updated>1564012155479</updated>
+      <updated>1565847062328</updated>
     </task>
-    <task id="LOCAL-00015" summary="Fixed issued with execution of temperature file. Basic input housekeeping.&#10;First part of temperature is complete.">
-      <created>1564014175337</created>
+    <task id="LOCAL-00015" summary="update - added correct version number. Sorry.">
+      <created>1565847278025</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1564014175338</updated>
+      <updated>1565847278025</updated>
     </task>
     <task id="LOCAL-00016" summary="finished everything except for individual core readings and timed refresh intervals. Warning: Code is brutal to look at.">
       <created>1564018672407</created>
@@ -371,6 +399,7 @@
     <MESSAGE value="finish making program more resilient, will not break if entering string" />
     <MESSAGE value="added basic master program, modularized a little" />
     <MESSAGE value="fix float not detected error on intervals.. that thing is giving me a lot of trouble" />
+<<<<<<< HEAD
     <MESSAGE value="Various housekeeping on all files" />
     <MESSAGE value="Fixed issued with execution of temperature file. Basic input housekeeping.&#10;First part of temperature is complete." />
     <MESSAGE value="finished everything except for individual core readings and timed refresh intervals. Warning: Code is brutal to look at." />
@@ -382,5 +411,14 @@
     <SUITE FILE_PATH="coverage/pycpu$pycpu.coverage" NAME="pycpu Coverage Results" MODIFIED="1564021227684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pycpu$cpu_temp.coverage" NAME="cpu_temp Coverage Results" MODIFIED="1564021195661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
     <SUITE FILE_PATH="coverage/pycpu$install.coverage" NAME="install Coverage Results" MODIFIED="1564011348053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+=======
+    <MESSAGE value="added interval support for cumulative printout and fixed bug where &#10;temperature sensor still iterates through subsensors, even when there aren't any. &#10;Updated version number to v1.05. Will add floating point support in next commit." />
+    <MESSAGE value="update - added correct version number. Sorry." />
+    <option name="LAST_COMMIT_MESSAGE" value="update - added correct version number. Sorry." />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pycpu$pycpu.coverage" NAME="pycpu Coverage Results" MODIFIED="1565846586666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/pycpu$cpu_temp.coverage" NAME="cpu_temp Coverage Results" MODIFIED="1565846856244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/source" />
+>>>>>>> 1f88739c7521f0d6964a53ace6f3bf689a503f46
   </component>
 </project>
