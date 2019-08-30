@@ -1,40 +1,94 @@
 import psutil
-# import time
-#
-# # Made dummy variable as an example for a string, to compare input with it.
-# dummy = "This is a good example string."
-#
-# try:
-#     test = str(round(psutil.cpu_freq()[0], -1) / 1000)
-# except TypeError:
-#     print("\nSorry, this device is not supported.\nPlease choose another function.\n")
-#     exec(open("pycpu.py").read())
-#
-# while True:
-#     unit = input("\nChoose unit:\n1.MHz\n2.GHz\n")
-#     if unit.isdigit() == True:
-#         unit = int(unit)
-#     if type(unit)==type(dummy):
-#         print("\nSorry, please enter a supported value\n")
-#     else:
-#         break
-# while True:
-#     interval = input("\nChoose update interval (in seconds):\n")
-#     try:
-#         interval = float(interval)
-#     except ValueError:
-#         print("You must enter a number")
-#     else:
-#         break
-#
-# if unit == 1:
-#     while True:
-#         print(str(round(psutil.sensors_temperatures[0],2))+" MHz")
-#         time.sleep(interval)
-#
-# if unit == 2:
-#     while True:
-#         print(str(round(psutil.cpu_freq()[0], -1) / 1000) + " GHz")
-#         time.sleep(interval)
+import time
 
-print(psutil.sensors_temperatures[2])
+temps = psutil.sensors_temperatures()
+
+# Made dummy variable as an example for a string, to compare input against it.
+dummy = "this is a string"
+
+float = 1.4
+
+print("\nTemperature Sensors Available:\n")
+
+list(temps.keys())
+for sensors in temps.keys():
+    print(sensors)
+
+while True:
+    choice = input("\nChoose display method:\n1. All Devices\n2. Specific Device\n")
+    if choice.isdigit() is True:
+        choice = int(choice)
+    if type(choice)==type(dummy):
+        print("\nSorry, please enter a supported value\n")
+    else:
+        break
+while True:
+    refresh = input("\nRefresh selected data at set interval?\n1. Yes\n2. No\n")
+    if refresh.isdigit() is True:
+        refresh = int(refresh)
+    if type(refresh)==type(dummy):
+        print("\nSorry, please enter a supported value\n")
+    else:
+        break
+
+if refresh == 1:
+    refresh = True
+    while True:
+        interval = input("\nChoose an update interval [in seconds]\n")
+        if interval.isdigit() is True:
+            interval = int(interval)
+        if type(interval) == type(dummy):
+            print("\nSorry, please enter a supported value")
+        else:
+            break
+else:
+    refresh = False
+
+if choice == 1:
+    print()
+    temps = psutil.sensors_temperatures()
+    if refresh:
+        while True:
+            for name, entries in temps.items():
+                print(name)
+                for entry in entries:
+                    print("    %-20s %s °C (high = %s °C, critical = %s °C)" % (
+                    entry.label or name, entry.current, entry.high,
+                    entry.critical))
+                print()
+            time.sleep(interval)
+    else:
+        for name, entries in temps.items():
+            print(name)
+        for entry in entries:
+            print("    %-20s %s °C (high = %s °C, critical = %s °C)" % (entry.label or name, entry.current, entry.high,
+                                                                        entry.critical))
+if choice == 2:
+    temps = psutil.sensors_temperatures()
+    device = input("\nEnter specific device ID. Case sensitive.\n")
+    name = temps[device]
+    for entry in name:
+        list = []
+        list.append(entry.label)
+    if len(list) == 0 or len(list)==1:
+        print("Sorry. Only main sensor available.")
+    else:
+        print("\nPossible Temperature Readings:\n")
+        for entry in list:
+            print(entry)
+
+    core = input("\nChoose reading to display. \nEnter '1' for All Sensors \nor enter a specific sensor\n")
+    if core is "1":
+        if refresh:
+            while True:
+                temps = psutil.sensors_temperatures()
+                name = temps[device]
+                print()
+                for entry in name:
+                    print("    %-20s %s °C (high = %s °C, critical = %s °C)" % (entry.label or device, entry.current, entry.high, entry.critical))
+                time.sleep(interval)
+        if not refresh:
+            for entry in device:
+                print("    %-20s %s °C (high = %s °C, critical = %s °C)" % (entry.label or device, entry.current, entry.high, entry.critical))
+    else:
+        print("Still working on individual parts of sensors.")
