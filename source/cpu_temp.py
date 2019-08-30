@@ -41,6 +41,14 @@ if refresh == 1:
             print("\nSorry, please enter a supported value")
         else:
             break
+        # rip the below should be debugged
+#         try:
+#             interval = float(interval)
+#         except ValueError:
+#             print("You must enter a number")
+#         else:
+#             break
+
 else:
     refresh = False
 
@@ -64,6 +72,7 @@ if choice == 1:
             print("    %-20s %s °C (high = %s °C, critical = %s °C)" % (entry.label or name, entry.current, entry.high,
                                                                         entry.critical))
 if choice == 2:
+    only=0
     temps = psutil.sensors_temperatures()
     device = input("\nEnter specific device ID. Case sensitive.\n")
     name = temps[device]
@@ -72,12 +81,15 @@ if choice == 2:
         list.append(entry.label)
     if len(list) == 0 or len(list)==1:
         print("Sorry. Only main sensor available.")
+        only = "1"
     else:
         print("\nPossible Temperature Readings:\n")
         for entry in list:
             print(entry)
-
-    core = input("\nChoose reading to display. \nEnter '1' for All Sensors \nor enter a specific sensor\n")
+    if only != "1":
+        core = input("\nChoose reading to display. \nEnter '1' for All Sensors \nor enter a specific sensor\n")
+    else:
+        core = "1"
     if core is "1":
         if refresh:
             while True:
