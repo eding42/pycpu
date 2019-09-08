@@ -25,13 +25,13 @@ The `psutil` module was created by Giampaolo Rodola.
 
 A. Curses implementation planned and in development. 
 
-# Supported Systems (So Far)
-**Please note that this list is far from exhaustive. pycpu should still work with any reasonably up to date system on this list.**
+# Supported Systems
+**Please note that this list is far from exhaustive. pycpu should still work with any reasonably up to date system, provided architectural requirements are fulfilled.**
 
 ### Operating Systems
 
 * Linux (Ubuntu/Debian, should work on other distros with a little work)
-* Windows 10 (WORK IN PROGRESS)
+* Windows 10 - Planned
 * ChromeOS - CPU Frequency and other sensors most likely broke. Missing many dependencies. 
 
 ### CPUs
