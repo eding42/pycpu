@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import psutil
 import time
 
@@ -5,8 +7,6 @@ temps = psutil.sensors_temperatures()
 
 # Made dummy variable as an example for a string, to compare input against it.
 dummy = "this is a string"
-
-float = 1.4
 
 print("\nTemperature Sensors Available:\n")
 
@@ -35,22 +35,19 @@ if refresh == 1:
     refresh = True
     while True:
         interval = input("\nChoose an update interval [in seconds]\n")
-        if interval.isdigit() is True:
-            interval = int(interval)
-        if type(interval) == type(dummy):
-            print("\nSorry, please enter a supported value")
+        # if interval.isdigit() is True:
+        #     interval = int(interval)
+        try:
+            interval = float(interval)
+        except ValueError:
+            print("You must enter a number")
         else:
             break
-        # rip the below should be debugged
-#         try:
-#             interval = float(interval)
-#         except ValueError:
-#             print("You must enter a number")
-#         else:
-#             break
-
-else:
-    refresh = False
+        # if type(interval) == type(dummy):
+        #     print("\nSorry, please enter a supported value")
+        # else:
+        #     break
+        # # rip the below should be debugged
 
 if choice == 1:
     print()
