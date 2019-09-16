@@ -1,8 +1,8 @@
 # PyCPU - A simple CPU monitoring tool
 
-The `cpufreq` gnome extension freezing your computer? Can't find an alternative for CPU-Z on linux? Try `pycpu`, a simple and fast implementation of the psutil module!
+The `cpufreq` gnome extension freezing your computer? Can't a good CPU monitor on linux? Try `pycpu`, a simple and fast implementation of the psutil module!
 
-The script outputs data about your system and CPU to your command line. 
+The script outputs sensor data about your system and CPU to the command line. 
 
 Future GUI releases are planned. 
 
@@ -11,11 +11,11 @@ The `psutil` module was created by Giampaolo Rodola.
 # Functionality and Features
 ### Current Features
 
-1. CPU Frequency (MHz)
+1. CPU Frequency - Stable (MHz)
+
+2. CPU Temperature - Stable, around 80% done. 
 
 ### Planned Features
-
-2. CPU Temperature - Active Development, around 80% done. 
 
 3. CPU Utilization (%) - Planned
 
@@ -23,34 +23,38 @@ The `psutil` module was created by Giampaolo Rodola.
 
 5. CPU Advanced Stats (CTX Switches, Interrupts, etc) - Planned
 
-# Supported Systems (So Far)
-**Please note that this list is far from complete. Just because your system isn't on here does not mean the program won't work**
+A. Curses implementation planned and in development. 
+
+# Supported Systems
+**Please note that this list is far from exhaustive. pycpu should still work with any reasonably up to date system, provided architectural requirements are fulfilled.**
 
 ### Operating Systems
 
 * Linux (Ubuntu/Debian, should work on other distros with a little work)
-* Windows 10 (WORK IN PROGRESS)
-* ChromeOS - CPU Frequency broken, be sure you have all dependencies properly installed, as the Sandboxed linux present on Chromebooks lacks many key packages, like `build-essentials` for example. 
+* Windows 10 - Planned
+* ChromeOS - CPU Frequency and other sensors most likely broke. Missing many dependencies. 
 
 ### CPUs
 **Please note that while the original module itself supports 32-bit and 64-bit architectures, only 64 bit has been tested and developed.**
 
-* AMD Ryzen 3/5/7 - Zen and Zen2-based architectures Summit Ridge(Zen), Pinnacle Ridge(Zen+), Raven Ridge(Zen), Matisse(Zen2) 
+* AMD Ryzen 3/5/7 or AMD Family 17h  - Zen and Zen2-based architectures Summit Ridge(Zen), Pinnacle Ridge(Zen+), Raven Ridge(Zen), Matisse(Zen2) 
 * AMD Threadripper - Probable support.
-* AMD Bulldozer/Excavator - Bristol Ridge CPUs and older. Bulldozer support is currently unverified. 
+* AMD Bulldozer/Excavator or AMD Family 15h - Bristol Ridge CPUs and older. Bulldozer support is currently unverified. 
 * Intel Core - Skylake and Derivatives. All except for Kaby Lake untested. 
 
-No support for ARM CPUs. 
+No support for ARM processors.
 
 # Installation (Ubuntu/Debian)
 
-Please install the latest version of Python 3:
+## Dependencies
 
-`sudo apt install python3`
+Please install the latest version of Python 3 and the associated -dev package:
 
-or Python 2.7 if using v0.1:
+`sudo apt install python3 python3-dev`
 
-`sudo apt install python2`
+or Python 2.7 if using v0.1 and below:
+
+`sudo apt install python2 python-dev`
 
 ### Cloning the PyCPU git repository
 
@@ -112,11 +116,11 @@ If any permissions errors come up use `sudo`, or the `--user` tag.
 
 Specific release notes are linked in the `tags` section of the repository.
 
-**v0.2-Stable** - Adds finished CPU Frequency utility, adds a master script for controlling the daughter scripts. Beginnings of Temperature utility. 
+**v1.0-Stable** - Version v1.0 has been released! All bugs on the CPU Frequency branch and most on the CPU Temperature branch have been worked through. Both sides are currently functional. 
 
 ### Previous Versions
 
-*nothing here...*
+**v0.2-Stable** - Adds finished CPU Frequency utility, adds a master script for controlling the daughter scripts. Beginnings of Temperature utility. 
 
 # Known Issues
 
@@ -141,7 +145,3 @@ Or if you want Python 2:
 Make sure you have `build-essentials` installed.
 
 `sudo apt install build-essentials`
-
-Also make sure you have the `python3-dev` package installed
-
-`sudo apt install python3-dev`
