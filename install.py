@@ -31,7 +31,7 @@ if x == 1:
 
 print("\n------------------ Cloning 'psutil' ------------------\n")
 
-os.system("git clone https://github.com/giampaolo/psutil.git")
+os.system("git submodule add https://github.com/giampaolo/psutil.git")
 os.chdir('psutil')
 
 print("\n-------------- Installing Dependencies ---------------\n")
